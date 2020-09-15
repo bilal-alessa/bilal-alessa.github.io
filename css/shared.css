@@ -144,12 +144,12 @@ img {
 }
 
 input[type=text] { /* This covers the input sections of the contact form */
-	width: 50%;
+	width: 100%;
 	padding: 12px;
     border: 1px solid #ccc; /* We are setting a solid border and its colors */
     border-radius: 4px; 
     box-sizing: border-box;
-    margin-left: 25%;
+    margin-left: 0%;
     margin-top: 6px;
     margin-bottom: 10px;
     resize: vertical; /* This specifies how an element is resized; vertical allows the user to resize the height of the element */
