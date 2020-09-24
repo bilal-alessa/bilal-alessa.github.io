@@ -4,6 +4,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src = "js/one_page_website.js" defer></script>
     <link rel="stylesheet" href="css/shared.css">
     <title>Bilal Al-Essa's Portfolio</title>
   </head>
@@ -25,6 +26,62 @@
 </div>
 
 <!--End of ABOUT -->
+ <!-- Images used to open the lightbox -->
+<div class="row">
+  <div class="column">
+    <img src="./images/html5.png" onclick="openModal();currentSlide(1)" class="hover-shadow">
+  </div>
+  <div class="column">
+    <img src="./images/css.png" onclick="openModal();currentSlide(2)" class="hover-shadow">
+  </div>
+  <div class="column">
+    <img src="./images/js.png" onclick="openModal();currentSlide(3)" class="hover-shadow">
+  </div>
+</div>
+
+<!-- Lightbox with my photos-->
+<div id="myModal" class="modal">
+  <span class="close cursor" onclick="closeModal()">&times;</span>
+  <div class="modal-content">
+
+    <div class="mySlides">
+      <div class="numbertext">1 / 3</div>
+      <img src="./images/html5.png" style="width:20%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">2 / 3</div>
+      <img src="./images/css.png" style="width:20%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">3 / 3</div>
+      <img src="./images/js.png" style="width:20%">
+    </div>
+    <!-- Next/previous controls -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    <!-- Caption text -->
+    <div class="caption-container">
+      <p id="caption"></p>
+    </div>
+
+    <!-- Thumbnail image controls -->
+    <div class="column">
+      <img class="demo" src="./images/html5.png" onclick="currentSlide(1)" alt="HTML5">
+    </div>
+
+    <div class="column">
+      <img class="demo" src="./images/css.png" onclick="currentSlide(2)" alt="CSS">
+    </div>
+
+    <div class="column">
+      <img class="demo" src="./images/js.png" onclick="currentSlide(3)" alt="JavaScript">
+    </div>
+  </div>
+</div>
+
 <!-- About text area -->
 
 <div class="row">
