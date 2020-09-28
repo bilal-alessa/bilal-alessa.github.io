@@ -1,3 +1,9 @@
+html {
+  scroll-behavior: smooth;
+}
+
+
+
 body {
 	margin: 0%; /* This ensures our site displays all the way to the edge of the browser screen */
 }
@@ -17,6 +23,8 @@ body {
 	width: 100%; /* This makes the navbar span the entire width of the page */
     z-index: 1; /*This ensures other elements don't display over the navbar */
     border-color:#7d8685 ;
+    -webkit-animation: moveNav 3s;
+    animation: moveNav 3s;
 }
 
 
@@ -29,7 +37,8 @@ body {
 	text-decoration: none; /* This gets rid of the underlines under the text on our navbar */
 	font-family: Avant Garde, Helvetica; /* This specifies the font family for text on our navbar */
 	font-size: 25px; /* This specifies the font size for text on our navbar */
-	text-align: center; /* This centers the text within its container */
+  text-align: center; /* This centers the text within its container */
+	letter-spacing: .2vw;
 }
 
 /* Navbar hover effect */
@@ -55,6 +64,7 @@ body {
     padding: 20px;
     border-radius: 30px;
     font-size: large;
+    animation: moveabout 4s;
 }
 .about:hover {
     transition-delay: .2s;
@@ -323,6 +333,228 @@ img.hover-shadow {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-html {
-  scroll-behavior: smooth;
+
+.mySlides {
+	display: none;
+}
+
+
+.mySlides {
+	display: none;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* Slideshow section / container */
+#Slideshow_Container {
+  width: 25.5vw;
+  height: auto;
+  padding-top: 2%;
+  position: relative;
+  margin: auto;
+
+}
+
+/* Images contained within slideshow */
+.Slide_Show_Images {
+  vertical-align: middle;
+  height: auto;
+  box-shadow: 0px 5px 10px 12px rgba(0, 0, 0, .75);
+  width: auto;
+}
+
+
+/* Next and previous buttons */
+.Previous, .Next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 2vw;
+  margin-top: -0vw;
+  color: darkgray;
+  font-weight: bold;
+  font-size: 1.5vw;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  transition: 0.6s ease;
+}
+
+/* Positioning the right-hand next button */
+.Next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* Hover effect on slide show buttons */
+.Previous:hover, .Next:hover {
+  background-color: rgba(0,0,0,0.8);
+  color: white;
+}
+
+/* Slideshow text */
+.text {
+  color: white;
+  padding: 1vw;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  font-family: Perpetua, Rockwell Extra Bold;
+  letter-spacing: .1vw; 
+  font-size: 1vw;
+  background-color: rgba(108, 121, 110, .7);
+  font-weight: bold;
+  border-radius: 7px 7px 7px 7px;
+}
+
+/* Number text (1/6, 2/6, etc.) - we have set this display to none, which means these are hidden */
+.Slide_Number {
+  color: white;
+  position: absolute;
+  top: 0;
+  font-family: Perpetua, Rockwell Extra Bold;
+  letter-spacing: .1vw; 
+  font-size: 1.5vw;
+  font-weight: bold;
+  display: none;
+  }
+
+/* The dots under the slideshow */
+.dot {
+  cursor: pointer;
+  height: 1vw;
+  width: 1vw;
+  margin: .25vw;
+  background-color: white;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+  position: relative;
+  z-index: 1;
+}
+
+/* Hover effect for slideshow dots */ 
+.active, .dot:hover {
+  background-color: black;
+}
+
+/* Fading animation for slideshow */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;  
+}
+
+@keyframes moveNav {
+  from {left: -100vw;}
+  to {left: 0vw;}
+}
+
+/* Makes contact form button slide in from right on page load */
+@keyframes movePopup {
+  from {right: -40vw;}
+  to {bottom: 1.75vw;}
+}
+
+/* Button used to open the contact form - fixed at the bottom of the page */
+.Pop_Up_Button {
+  bottom: 1.75vw;
+  right: 1.75vw;
+  width: 25vw;  
+  background-color: darkgray;
+  color: white;
+  border: solid;
+  cursor: pointer;
+  position: fixed;
+  -webkit-animation: movePopup 5s;
+  animation: movePopup 5s;
+}
+
+/* The popup form - hidden by default */
+.form-popup {
+  border: 3px solid #f0f1f0;
+  z-index: 8;
+  display: none;
+  position: fixed;
+  bottom: 6px;
+  right: 6px;
+}
+
+/* Form styling */
+.form-container {
+  max-width: 30vw;
+  padding: 9px;
+  background-color: white;
+}
+
+/* Input fields */
+.form-container input[type=text], .form-container input[type=password] {
+  width: 100%;
+  padding: .93vw;
+  margin: .6vw 0 .6vw 0;
+  border: none;
+  background: Gainsboro;
+  font-family: Helvetica, Avant Garde;
+  font-size: 1vw; 
+}
+
+/* Submit button */
+.form-container .btn {
+  background-color: white;
+  color: black;
+  border-color: black;
+  margin-bottom:1vh;
+}
+
+/* Close button */
+.form-container .cancel {
+  background-color: black;
+  color: white;
+  border-color: gray;
+}
+
+/* Button styling */
+button {
+  font-family: "Trebuchet MS", Optima; 
+  letter-spacing: .3vw; 
+  font-size: 1.5vw;
+  font-weight: bold;
+  padding: 1.5vw 1.5vw;
+  border-style: solid;
+  cursor: pointer;
+  width: 100%;
+  height: auto;
+}
+
+/* Hover effect for buttons */
+button:hover, .form-container .btn:hover{
+  color: white;
+  background-color: black;
+  -webkit-transition-duration: 1s; 
+  transition-duration: 1s;
+  border-style: solid;
+  border-color: silver;
+}
+.form-container .cancel:hover{
+  color: white;
+  background-color: darkred;
+  -webkit-transition-duration: 1s; 
+  transition-duration: 1s;
+  border-style: solid;
+  border-color: black;
+}	
+
+@keyframes moveabout {
+  from {top: -100vw;}
+  to {top: 0px;}
 }
