@@ -79,63 +79,72 @@ body {
 }
 
 /* about columns css styles */
-    .column_1 {
-    background-color:rgb(108, 121, 110, .7);
-    color: white;  
-    float: left;
-    width: 50%;
-    padding:20px;
-    height: 375px; /* Should be removed. Only for demonstration */
-    }
+  .column_1 {
+  background-color:rgb(108, 121, 110, .7);
+  color: white;  
+  float: left;
+  width: 50%;
+  padding:20px;
+  height: 375px; /* Should be removed. Only for demonstration */
+  border-radius: 50px;
+  }
 
 .column_2 {
-    background-color: rgb(167, 164, 146,.7);
-    color: white;
-    float: left;
-    width: 50%;
-    padding: 10px;
-    height: 375px;
-    
-  }
+  background-color: rgb(167, 164, 146,.7);
+  color: white;
+  float: left;
+  width: 50%;
+  padding: 10px;
+  height: 375px;
+  border-radius: 50px;
+}
 
 
 /* github columns css styles */
-  .column_3 {
-    background-color: rgb(167, 164, 146,.7);
-    color: white;
-    float: left;
-    width: 50%;
-    padding: 10px;
-    height: 375px;
-    
+.column_3 {
+  background-color: rgb(167, 164, 146,.7);
+  color: white;
+  float: left;
+  width: 50%;
+  padding: 10px;
+  height: 375px;
+  border-radius: 50px;
+  
+}
+
+.column_4 {
+  background-color:rgb(108, 121, 110, .7);
+  color: white;  
+  float: left;
+  width: 50%;
+  padding:20px;
+  height: 375px; /* Should be removed. Only for demonstration */
+  border-radius: 50px;
+
   }
 
-  .column_4 {
-    background-color:rgb(108, 121, 110, .7);
-    color: white;  
-    float: left;
-    width: 50%;
-    padding:20px;
-    height: 375px; /* Should be removed. Only for demonstration */
-    }
 
+  /* contact columns css styles */
 
+.column_5 {
+  background-color: rgb(167, 164, 146,.7);
+  color: white;
+  float: left;
+  width: 50%;
+  height: 375px;
+  border-radius: 50px;
+  padding: 10px;
+}
 
-    /* contact columns css styles */
-
-    .column_5 {
-
-    background-color:rgb(108, 121, 110);
-    color: white;
-    float: left;
-    width: 25%;
-    padding:20px;
-    margin-left: 38%;
-    height: 475px; /* Should be removed. Only for demonstration */
-        }
-
-
-
+.column_6 {
+  background-color:rgb(108, 121, 110, .7);
+  color: white;  
+  float: left;
+  width: 50%;
+  padding:20px;
+  height: 375px; /* Should be removed. Only for demonstration */
+  border-radius: 50px;
+  }
 
 .row:after {
   content: "";
@@ -145,11 +154,11 @@ body {
 
 img {
 	filter: grayscale(75%); /* This rids our pictures of 75% of their color */
-    border-radius: 8px; /* This causes our images to have slightly rounded edges */
-    max-width: 80%; 
-    height: 350px; 
+  border-radius: 8px; /* This causes our images to have slightly rounded edges */
+  max-width: 80%; 
+  height: 350px; 
 	margin-left: auto; /* This in combination with margin-right: auto centers our images */
-    margin-right: auto;
+  margin-right: auto;
 	display: block;	/* By specifying block display we can ensure our images are able to be centered */
 }
 
